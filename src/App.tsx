@@ -1,17 +1,11 @@
 import './App.css'
+import { Navbar} from './widget/Navbar'
 
 function App() {
 
   return (
   <>
-  <div className="appBar">
-    <div className="appBarMenuLeft">
-      Mimir
-    </div>
-    <div className="appBarMenuRight">
-      Manage Cards
-    </div>
-  </div>
+  <Navbar />
   <div className="tabelle">
     <div className="frontGrid">
       <input className="inputText" type="text" placeholder="Front">
