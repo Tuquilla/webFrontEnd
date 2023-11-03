@@ -1,0 +1,40 @@
+.frontGrid {
+    grid-area: frontGrid;
+  }
+  
+.backGrid {
+    grid-area: backGrid;
+}
+  
+.buttonGrid {
+    grid-area: buttonGrid;
+    height: 25px;
+}
+
+.frontGridFilter {
+    grid-area: frontGridFilter;
+}
+  
+.backGridFilter {
+    grid-area: backGridFilter;
+}
+
+.inputText {
+    width: 96%;
+    border-bottom: 2px; 
+    border-style: none none solid none;
+    border-color: #7ea5e1;
+    background-color: #e2dddd;
+    outline: none;
+    font-size: 15px;
+  
+}
+  
+.inputText::placeholder {
+    color: #7ea5e1;
+}
+  
+.buttonGridFilter {
+    grid-area: buttonGridFilter;
+    height: 25px;
+}

@@ -17,86 +17,6 @@ html {
   height: 100%;
 }
 
-.eingabe {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  border: 1%;
-  height: 25px;
-  line-height: 25px;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 2%;
-  margin-right: 2%;
-  /*
-  border-bottom: 2px; 
-  border-style: none none solid none;
-  */
-}
-
-.eingabeCheckbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  height: 25px;
-  line-height: 25px;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  margin-left: 2%;
-  margin-right: 2%;
-}
-
-.front {
-  border-top: 5%;
-  width: 42.5%;
-}
-
-.frontFilter {
-  border-top: 5%;
-  width: 42.5%;
-  font-weight: bold;
-}
-
-.back {
-  border-top: 5%;
-  width: 42.5%;
-}
-
-.backFilter {
-  border-top: 5%;
-  width: 42.5%;
-  font-weight: bold;
-}
-
-.save {
-  border-top: 5%;
-  width: 15%;
-}
-
-.inputText {
-  width: 96%;
-  border-bottom: 2px; 
-  border-style: none none solid none;
-  border-color: #7ea5e1;
-  background-color: #e2dddd;
-  outline: none;
-  font-size: 15px;
-
-}
-
-.inputText::placeholder {
-  color: #7ea5e1;
-}
-
-.buttonSaveDelete {
-  width: 100%;
-  height: 100%;
-  background-color: #1a5974;
-  color: white;
-  border: none;
-  border-radius: 4px;
-}
-
 .tabelle {
   display: grid;
   grid-template-columns: auto auto 16%;
@@ -111,60 +31,6 @@ html {
   padding-right: 2.5%;
 }
 
-.buttonSaveDeleteGrid {
-  width: 100%;
-  height: 100%;
-  background-color: #1a5974;
-  color: white;
-  border: none;
-  border-radius: 4px;
-}
-
-.frontGrid {
-  grid-area: frontGrid;
-}
-
-.backGrid {
-  grid-area: backGrid;
-}
-
-.buttonGrid {
-  grid-area: buttonGrid;
-  height: 25px;
-}
-
-.frontGridFilter {
-  grid-area: frontGridFilter;
-}
-
-.backGridFilter {
-  grid-area: backGridFilter;
-}
-
-.buttonGridFilter {
-  grid-area: buttonGridFilter;
-  height: 25px;
-}
-
-.frontGridOrder {
-  /*grid-area: frontGridOrder;*/
-  font-weight: bold;
-}
-
-.backGridOrder {
-  /*grid-area: backGridOrder;*/
-  font-weight: bold;
-}
-
-.buttonGridOrder {
-  /*grid-area: buttonGridOrder;*/
-  height: 25px;
-}
-
-.backGridListe {
-  border-bottom: 0.2px solid rgb(192, 188, 188);
-}
-
 .tabelleVokabular {
   display: grid;
   grid-area: tabelleVokabular;
@@ -172,21 +38,3 @@ html {
   row-gap: 10%;
 }
 
-.frontGridVokabular {
-  display: flex;
-  align-items: center;
-}
-
-.backGridVokabular {
-  display: flex;
-  align-items: center;
-}
-
-.buttonGridVokabular {
-  height: 25px;
-}
-
-.trennlinie {
-  height: 0px;
-  border-bottom: 0.2px solid rgb(192, 188, 188);
-}
