@@ -1,6 +1,6 @@
 import './Vocabular.css'
 
-export const Vocuabular = () => {
+export const Vocabular = () => {
     return (
     <>
     <div className="frontGridVokabular">Stunde</div>

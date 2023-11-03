@@ -16,25 +16,3 @@ body {
 html {
   height: 100%;
 }
-
-.tabelle {
-  display: grid;
-  grid-template-columns: auto auto 16%;
-  grid-template-areas: 
-      'frontGrid backGrid buttonGrid'
-      'frontGridFilter backGridFilter buttonGridFilter'
-      /*'frontGridOrder backGridOrder buttonGridOrder'*/
-      'tabelleVokabular tabelleVokabular tabelleVokabular';
-  row-gap: 10%;
-  padding-top: 2.5%;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-}
-
-.tabelleVokabular {
-  display: grid;
-  grid-area: tabelleVokabular;
-  grid-template-columns: auto auto 16%;
-  row-gap: 10%;
-}
-

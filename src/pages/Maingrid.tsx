@@ -1,7 +1,12 @@
 import './Maingrid.css'
+import { ReactNode } from 'react'
 
-export const Maingrid = () => {
+type Props = {
+    children: ReactNode
+}
+
+export const Maingrid = ({children} : Props) => {
     return (
-        <div className="tabelle"></div>
+        <div className="tabelle">{children}</div>
     )
 }

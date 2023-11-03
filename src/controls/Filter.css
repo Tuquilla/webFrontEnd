@@ -1,0 +1,13 @@
+
+.frontGridFilter {
+    grid-area: frontGridFilter;
+}
+  
+.backGridFilter {
+    grid-area: backGridFilter;
+}
+
+.buttonGridFilter {
+    grid-area: buttonGridFilter;
+    height: 25px;
+}
