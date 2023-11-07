@@ -1,23 +1,23 @@
 .appBarMenuLeft {
-    color: #F1EFEF;
-    font-size: 20px;
-    line-height: 45px;
-    padding-left: 1%;
-  }
-  
-  .appBarMenuRight {
-    color:  #7ea5e1;
-    font-size: 15px;
-    line-height: 45px;
-    padding-right: 1%;
-  }
-  
-  .appBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background: #132043;
-    text-align: right;
-    height: 45px;
-    width: 100%;
-  }
+  color: #F1EFEF;
+  font-size: 20px;
+  line-height: 45px;
+  padding-left: 1%;
+}
+
+.appBarMenuRight {
+  color:  #7ea5e1;
+  font-size: 15px;
+  line-height: 45px;
+  padding-right: 1%;
+}
+
+.appBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #132043;
+  text-align: right;
+  height: 45px;
+  width: 100%;
+}
