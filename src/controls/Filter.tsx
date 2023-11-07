@@ -1,6 +1,12 @@
+import { Card } from '../types/Card'
 import './Filter.css'
 
-export const Filter = () => {
+type Props = {
+  cards: Card[]
+  setCard: (cards: Card[]) => void
+}
+
+export const Filter = ({cards}: Props) => {
     return (
     <>
     <div className="frontGridFilter"></div>

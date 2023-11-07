@@ -5,8 +5,8 @@
         'frontGrid backGrid buttonGrid'
         'frontGridFilter backGridFilter buttonGridFilter'
         'tabelleVokabular tabelleVokabular tabelleVokabular';
-    row-gap: 10%;
+    row-gap: 5px;
     padding-top: 2.5%;
     padding-left: 2.5%;
-padding-right: 2.5%;
+    padding-right: 2.5%;
 }

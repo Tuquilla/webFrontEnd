@@ -2,5 +2,5 @@
   display: grid;
   grid-area: tabelleVokabular;
   grid-template-columns: auto auto 16%;
-  row-gap: 10%;
+  row-gap: 12px;
 }

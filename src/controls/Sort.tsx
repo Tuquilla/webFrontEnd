@@ -1,6 +1,12 @@
+import { Card } from '../types/Card'
 import './Sort.css'
 
-export const Sort = () => {
+type Props = {
+    cards: Card[]
+    setCard: (cards: Card[]) => void
+  }
+
+export const Sort = ({cards}: Props) => {
     return (
     <>
     <div className="frontGridOrder">Front ▲</div>
