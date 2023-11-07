@@ -1,5 +1,5 @@
 import './Vocgrid.css'
-import { ReactNode } from 'react'
+import {ReactNode} from 'react'
 
 type Props = {
     children: ReactNode
@@ -8,7 +8,7 @@ type Props = {
 export const Vocgrid = ({children}: Props) => {
     return (
     <>
-    <div className="tabelleVokabular">{ children }</div>
+    <div className="tabelleVokabular">{children}</div>
     </>
     )
 }

@@ -1,12 +1,12 @@
 import './App.css'
 
-import { Navbar } from './widgets/Navbar'
-import { Maingrid } from './pages/Maingrid'
-import { Input } from './controls/Input'
-import { Filter } from './controls/Filter'
-import { Vocgrid } from './pages/Vocgrid'
-import { Sort } from './controls/Sort'
-import { Vocabular } from './pages/Vocabular'
+import {Navbar} from './widgets/Navbar'
+import {Maingrid} from './pages/Maingrid'
+import {Input} from './controls/Input'
+import {Filter} from './controls/Filter'
+import {Vocgrid} from './pages/Vocgrid'
+import {Sort} from './controls/Sort'
+import {Vocabular} from './pages/Vocabular'
 
 function App() {
 

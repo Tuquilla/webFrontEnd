@@ -1,5 +1,5 @@
 import './Maingrid.css'
-import { ReactNode } from 'react'
+import {ReactNode} from 'react'
 
 type Props = {
     children: ReactNode
