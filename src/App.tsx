@@ -1,6 +1,6 @@
 import './App.css'
 
-import { Navbar } from './widget/Navbar'
+import { Navbar } from './widgets/Navbar'
 import { Maingrid } from './pages/Maingrid'
 import { Input } from './controls/Input'
 import { Filter } from './controls/Filter'
