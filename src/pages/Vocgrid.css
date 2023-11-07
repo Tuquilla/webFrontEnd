@@ -1,6 +1,6 @@
 .tabelleVokabular {
-    display: grid;
-    grid-area: tabelleVokabular;
-    grid-template-columns: auto auto 16%;
-    row-gap: 10%;
-  }
+  display: grid;
+  grid-area: tabelleVokabular;
+  grid-template-columns: auto auto 16%;
+  row-gap: 10%;
+}

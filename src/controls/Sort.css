@@ -1,14 +1,11 @@
 .frontGridOrder {
-    /*grid-area: frontGridOrder;*/
-    font-weight: bold;
-  }
-  
-  .backGridOrder {
-    /*grid-area: backGridOrder;*/
-    font-weight: bold;
-  }
-  
-  .buttonGridOrder {
-    /*grid-area: buttonGridOrder;*/
-    height: 25px;
-  }
+  font-weight: bold;
+}
+
+.backGridOrder {
+  font-weight: bold;
+}
+
+.buttonGridOrder {
+  height: 25px;
+}
