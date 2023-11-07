@@ -1,6 +1,6 @@
-import './Search.css'
+import './Input.css'
 
-export const Search = () => {
+export const Input = () => {
     return (
     <>
     <div className="frontGrid">

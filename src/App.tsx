@@ -2,7 +2,7 @@ import './App.css'
 
 import { Navbar } from './widget/Navbar'
 import { Maingrid } from './pages/Maingrid'
-import { Search } from './controls/Search'
+import { Input } from './controls/Input'
 import { Filter } from './controls/Filter'
 import { Vocgrid } from './pages/Vocgrid'
 import { Sort } from './controls/Sort'
@@ -14,7 +14,7 @@ function App() {
   <>
   <Navbar />
   <Maingrid>
-    <Search />
+    <Input />
     <Filter />
     <Vocgrid>
       <Sort />
