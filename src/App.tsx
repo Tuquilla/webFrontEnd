@@ -1,5 +1,6 @@
 import './App.css'
 import {Card} from './types/Card'
+import {SortState} from './types/SortState'
 
 import {Navbar} from './widgets/Navbar'
 import {Maingrid} from './pages/Maingrid'
@@ -13,16 +14,16 @@ import {useState} from 'react'
 
 function App() {
   const [cards, setCard] = useState<Card[]>([])
-  console.log(cards[0])
+  const [sortStates, setSort] = useState<SortState>({front: true, asc:true})
   return (
   <>
   <Navbar />
-  <Maingrid cards={cards} setCard={setCard}>
-    <Input cards={cards} setCard={setCard}/>
-    <Filter cards={cards} setCard={setCard}/>
-    <Vocgrid cards={cards} setCard={setCard}>
-      <Sort cards={cards} setCard={setCard}/>
-      <Vocabular cards={cards} setCard={setCard}/>
+  <Maingrid cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}>
+    <Input cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}/>
+    <Filter cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}/>
+    <Vocgrid cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}>
+      <Sort cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}/>
+      <Vocabular cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}/>
     </Vocgrid>
   </Maingrid>
   </> 

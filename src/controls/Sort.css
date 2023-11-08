@@ -2,10 +2,23 @@
   font-weight: bold;
 }
 
+.gridOrderButton {
+  border: none;
+  font-size: 17px;
+  width: 100%;
+  height: 100%;
+  background-color: #e2dddd;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding-left: 0;
+  text-align: left;
+}
+
 .backGridOrder {
   font-weight: bold;
 }
 
-.buttonGridOrder {
+.buttonPlaceholder {
   height: 25px;
 }
