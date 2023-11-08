@@ -12,16 +12,17 @@ import {Vocabular} from './pages/Vocabular'
 import {useState} from 'react'
 
 function App() {
-  const [Cards, setCard] = useState<Card[]>([])
+  const [cards, setCard] = useState<Card[]>([])
+  console.log(cards[0])
   return (
   <>
   <Navbar />
-  <Maingrid cards={Cards} setCard={setCard}>
-    <Input cards={Cards} setCard={setCard}/>
-    <Filter cards={Cards} setCard={setCard}/>
-    <Vocgrid cards={Cards} setCard={setCard}>
-      <Sort cards={Cards} setCard={setCard}/>
-      <Vocabular cards={Cards} setCard={setCard}/>
+  <Maingrid cards={cards} setCard={setCard}>
+    <Input cards={cards} setCard={setCard}/>
+    <Filter cards={cards} setCard={setCard}/>
+    <Vocgrid cards={cards} setCard={setCard}>
+      <Sort cards={cards} setCard={setCard}/>
+      <Vocabular cards={cards} setCard={setCard}/>
     </Vocgrid>
   </Maingrid>
   </> 

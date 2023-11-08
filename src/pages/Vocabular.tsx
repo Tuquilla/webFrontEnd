@@ -7,67 +7,35 @@ type Props = {
 }
 
 export const Vocabular = ({cards}: Props) => {
+    
+    const Sortierung = (cards: Card[]) => {
+        const newSort = [...cards].sort((n1,n2) => {
+            if (n1.front > n2.front) {
+                return 1
+            }
+        
+            if (n1.front < n2.front) {
+                return -1
+            }
+        
+            return 0;
+        })
+        return newSort
+    }
+
+    const deleteCard = (front: string, back: string) => {
+        const newCards = [...cards].filter(r => r.front !== front && r.back !== back)
+        setCard(newCards)
+    }
+
     return (
     <>
-    <div className="frontGridVokabular">Stunde</div>
-    <div className="backGridVokabular">Hour</div>
-    <div className="buttonGridVokabular">
-        <button className="buttonSaveDeleteGrid" type="button">Delete</button>
-    </div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="frontGridVokabular">Auto</div>
-    <div className="backGridVokabular">Car</div>
-    <div className="buttonGridVokabular">
-        <button className="buttonSaveDeleteGrid" type="button">Delete</button>
-    </div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="frontGridVokabular">Bleistift</div>
-    <div className="backGridVokabular">Pencil</div>
-    <div className="buttonGridVokabular">
-        <button className="buttonSaveDeleteGrid" type="button">Delete</button>
-    </div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="frontGridVokabular">Bleistift</div>
-    <div className="backGridVokabular">Pencil</div>
-    <div className="buttonGridVokabular">
-        <button className="buttonSaveDeleteGrid" type="button">Delete</button>
-    </div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="frontGridVokabular">Bleistift</div>
-    <div className="backGridVokabular">Pencil</div>
-    <div className="buttonGridVokabular">
-        <button className="buttonSaveDeleteGrid" type="button">Delete</button>
-    </div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="frontGridVokabular">Bleistift</div>
-    <div className="backGridVokabular">Pencil</div>
-    <div className="buttonGridVokabular">
-        <button className="buttonSaveDeleteGrid" type="button">Delete</button>
-    </div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="frontGridVokabular">Bleistift</div>
-    <div className="backGridVokabular">Pencil</div>
-    <div className="buttonGridVokabular">
-        <button className="buttonSaveDeleteGrid" type="button">Delete</button>
-    </div>
-    {cards.map(card => 
+    {Sortierung(cards).map(card => 
     <>
     <div key={card.front} className="frontGridVokabular">{card.front}</div>
     <div key={card.back} className="backGridVokabular">{card.back}</div>
     <div key={card.back+card.front} className="buttonGridVokabular">
-        <button className="buttonSaveDeleteGrid" type="button">Delete</button>
+        <button className="buttonSaveDeleteGrid" onClick={() => deleteCard(card.front, card.back)} type="button">Delete</button>
     </div>
     <div className="trennlinie"></div>
     <div className="trennlinie"></div>
@@ -75,4 +43,8 @@ export const Vocabular = ({cards}: Props) => {
     </>)}
     </>
     )
+}
+
+function setCard(newCards: Card[]) {
+    throw new Error('Function not implemented.')
 }
