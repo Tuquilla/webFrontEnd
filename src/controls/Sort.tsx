@@ -10,37 +10,6 @@ type Props = {
   }
 
 export const Sort = ({cards, setCard, sortStates, setSort}: Props) => {
-/*
-  const sortFront = (cards: Card[]) => {
-    const newSort = [...cards].sort((n1,n2) => {
-      if (n1.front > n2.front) {
-          return 1
-      }
-  
-      if (n1.front < n2.front) {
-          return -1
-      }
-  
-      return 0;
-    })
-    setCard(newSort)
-  }
-
-  const sortBack = (cards: Card[]) => {
-    const newSort = [...cards].sort((n1,n2) => {
-      if (n1.back > n2.back) {
-          return 1
-      }
-  
-      if (n1.back < n2.back) {
-          return -1
-      }
-  
-      return 0;
-    })
-    setCard(newSort)
-  }
-  */
 
   const sortFront = () => {
     const newSortStates: SortState = {front: sortStates.front, asc: sortStates.asc}
