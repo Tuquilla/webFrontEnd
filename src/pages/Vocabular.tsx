@@ -44,7 +44,3 @@ export const Vocabular = ({cards}: Props) => {
     </>
     )
 }
-
-function setCard(newCards: Card[]) {
-    throw new Error('Function not implemented.')
-}
