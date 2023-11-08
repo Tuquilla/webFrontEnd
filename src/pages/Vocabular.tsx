@@ -6,7 +6,7 @@ type Props = {
     setCard: (cards: Card[]) => void
 }
 
-export const Vocabular = ({cards}: Props) => {
+export const Vocabular = ({cards, setCard}: Props) => {
     
     const Sortierung = (cards: Card[]) => {
         const newSort = [...cards].sort((n1,n2) => {
