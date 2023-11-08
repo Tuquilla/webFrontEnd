@@ -1,6 +1,6 @@
 .tabelle {
     display: grid;
-    grid-template-columns: auto auto 16%;
+    grid-template-columns: 42% 42% 16%;
     grid-template-areas: 
         'frontGrid backGrid buttonGrid'
         'frontGridFilter backGridFilter buttonGridFilter'

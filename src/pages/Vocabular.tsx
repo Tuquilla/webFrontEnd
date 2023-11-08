@@ -1,17 +1,20 @@
 import { Card } from '../types/Card'
+import { FilterState } from '../types/FilterState'
 import { SortState } from '../types/SortState'
 import './Vocabular.css'
 
 type Props = {
+    filterStates: FilterState
+    setFilterStates: (filterStates: FilterState) => void
     sortStates: SortState
     setSort: (sortSort: SortState) => void
     cards: Card[]
     setCard: (cards: Card[]) => void
 }
 
-export const Vocabular = ({cards, setCard, sortStates}: Props) => {
+export const Vocabular = ({cards, setCard, sortStates, filterStates}: Props) => {
 
-   const sortierung = () => {
+    const sortierung = () => {
         const newSort = [...cards].sort((n1,n2) => {
             if (sortStates.front === true) {
                 if (sortStates.asc === true) {
@@ -61,6 +64,23 @@ export const Vocabular = ({cards, setCard, sortStates}: Props) => {
         return newSort
     }
 
+    const filter = (cards: Card[]) => {
+        console.log("Front: " + filterStates.front)
+        console.log("Back: " + filterStates.back)
+        console.log("FilterState: " + filterStates.filterTable)
+        if (filterStates.filterTable === true && filterStates.front !== '') {
+            const newFilter = cards.filter(r => r.front.includes(filterStates.front))
+            return newFilter
+        }
+        else if (filterStates.filterTable === true && filterStates.back !== '') {
+            const newFilter = cards.filter(r => r.back.includes(filterStates.back))
+            return newFilter
+        }
+        else {
+            return cards
+        }
+    }
+
     const deleteCard = (front: string, back: string) => {
         const newCards = [...cards].filter(r => r.front !== front && r.back !== back)
         setCard(newCards)
@@ -68,7 +88,7 @@ export const Vocabular = ({cards, setCard, sortStates}: Props) => {
 
     return (
     <>
-    {sortierung().map(card => 
+    {filter(sortierung()).map(card => 
     <>
     <div className="frontGridVokabular">{card.front}</div>
     <div className="backGridVokabular">{card.back}</div>

@@ -1,6 +1,6 @@
 .tabelleVokabular {
   display: grid;
   grid-area: tabelleVokabular;
-  grid-template-columns: auto auto 16%;
+  grid-template-columns: 42% 42% 16%;
   row-gap: 12px;
 }

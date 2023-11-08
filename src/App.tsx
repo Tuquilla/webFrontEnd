@@ -1,6 +1,7 @@
 import './App.css'
 import {Card} from './types/Card'
 import {SortState} from './types/SortState'
+import {FilterState} from './types/FilterState'
 
 import {Navbar} from './widgets/Navbar'
 import {Maingrid} from './pages/Maingrid'
@@ -15,15 +16,17 @@ import {useState} from 'react'
 function App() {
   const [cards, setCard] = useState<Card[]>([])
   const [sortStates, setSort] = useState<SortState>({front: true, asc:true})
+  /*const [filterTable, setFilter] = useState<boolean>(true)*/
+  const [filterStates, setFilterStates] = useState<FilterState>({front: '', back: '', filterTable: true})
   return (
   <>
   <Navbar />
-  <Maingrid cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}>
-    <Input cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}/>
-    <Filter cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}/>
-    <Vocgrid cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}>
-      <Sort cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}/>
-      <Vocabular cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort}/>
+  <Maingrid cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort} filterStates={filterStates} setFilterStates={setFilterStates}>
+    <Input cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort} filterStates={filterStates} setFilterStates={setFilterStates}/>
+    <Filter cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort} filterStates={filterStates} setFilterStates={setFilterStates}/>
+    <Vocgrid cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort} filterStates={filterStates} setFilterStates={setFilterStates}>
+      <Sort cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort} filterStates={filterStates} setFilterStates={setFilterStates}/>
+      <Vocabular cards={cards} setCard={setCard} sortStates={sortStates} setSort={setSort} filterStates={filterStates} setFilterStates={setFilterStates}/>
     </Vocgrid>
   </Maingrid>
   </> 
