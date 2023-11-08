@@ -16,12 +16,14 @@
     border-bottom: 2px; 
     border-style: none none solid none;
     border-color: #7ea5e1;
+    color: rgb(40, 95, 162);
     background-color: #e2dddd;
     outline: none;
+    font-weight: bold;
     font-size: 15px;
-  
 }
   
 .inputText::placeholder {
     color: #7ea5e1;
+    font-weight: normal;
 }

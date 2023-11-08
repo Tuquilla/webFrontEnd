@@ -88,16 +88,16 @@ export const Vocabular = ({cards, setCard, sortStates, filterStates}: Props) => 
 
     return (
     <>
-    {filter(sortierung()).map(card => 
+    {filter(sortierung()).map((card,index,arr) => 
     <>
     <div className="frontGridVokabular">{card.front}</div>
     <div className="backGridVokabular">{card.back}</div>
     <div className="buttonGridVokabular">
         <button className="buttonSaveDeleteGrid" onClick={() => deleteCard(card.front, card.back)} type="button">Delete</button>
     </div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
-    <div className="trennlinie"></div>
+    {index<arr.length-1?<div className="trennlinie"></div>:null}
+    {index<arr.length-1?<div className="trennlinie"></div>:null}
+    {index<arr.length-1?<div className="trennlinie"></div>:null}
     </>)}
     </>
     )
