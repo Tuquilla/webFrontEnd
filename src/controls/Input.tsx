@@ -40,10 +40,10 @@ export const Input = ({cards, setCard, filterStates, setFilterStates}: Props) =>
   return (
   <>
   <div className="frontGrid">
-      <input className="inputText" value={filterStates.front} onChange={e => addFront(e.target.value)} type="text" placeholder="Front"></input>
+      <input className="inputText" value={filterStates.front} onChange={e => addFront(e.target.value)} type="text" placeholder="Front" id="inputFront"></input>
   </div>
   <div className="backGrid">
-    <input className="inputText" value={filterStates.back} onChange={e => addBack(e.target.value)} type="text" placeholder="Back"></input>
+    <input className="inputText" value={filterStates.back} onChange={e => addBack(e.target.value)} type="text" placeholder="Back" id="inputBack"></input>
   </div>
   <div className="buttonGrid">
     <button className="buttonSaveDeleteGrid" onClick={() => addCard()} type="button">Save</button>
