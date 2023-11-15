@@ -1,3 +1,4 @@
+import React from 'react'
 import { Card } from '../types/Card'
 import { FilterState } from '../types/FilterState'
 import { SortState } from '../types/SortState'
@@ -86,7 +87,7 @@ export const Vocabular = ({cards, setCard, sortStates, filterStates}: Props) => 
     return (
     <>
     {filter(sortierung()).map((card,index,arr) => 
-    <>
+    <React.Fragment key={card.front}>
     <div className="frontGridVokabular">{card.front}</div>
     <div className="backGridVokabular">{card.back}</div>
     <div className="buttonGridVokabular">
@@ -95,7 +96,7 @@ export const Vocabular = ({cards, setCard, sortStates, filterStates}: Props) => 
     {index<arr.length-1?<div className="trennlinie"></div>:null}
     {index<arr.length-1?<div className="trennlinie"></div>:null}
     {index<arr.length-1?<div className="trennlinie"></div>:null}
-    </>)}
+    </React.Fragment>)}
     </>
     )
 }
