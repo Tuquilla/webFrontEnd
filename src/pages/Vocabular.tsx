@@ -19,46 +19,18 @@ export const Vocabular = ({cards, setCard, sortStates, filterStates}: Props) => 
         const newSort = [...cards].sort((n1,n2) => {
             if (sortStates.front === true) {
                 if (sortStates.asc === true) {
-                    if (n1.front > n2.front) {
-                        return 1
-                    }
-                
-                    if (n1.front < n2.front) {
-                        return -1
-                    }  
-                    return 0 
+                    return n1.front > n2.front ? 1 : -1
                 }
                 else {
-                    if (n1.front > n2.front) {
-                        return -1
-                    }
-                
-                    if (n1.front < n2.front) {
-                        return 1
-                    }   
-                    return 0
+                    return n1.front > n2.front ? -1 : 1
                 }
             }
             else {
                 if (sortStates.asc === true) {
-                    if (n1.back > n2.back) {
-                        return 1
-                    }
-                
-                    if (n1.back < n2.back) {
-                        return -1
-                    }    
-                    return 0
+                    return n1.back > n2.back ? 1 : -1
                 }
                 else {
-                    if (n1.back > n2.back) {
-                        return -1
-                    }
-                
-                    if (n1.back < n2.back) {
-                        return 1
-                    }   
-                    return 0
+                    return n1.back > n2.back ? -1 : 1
                 }
             }    
         })
