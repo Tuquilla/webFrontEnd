@@ -67,13 +67,11 @@ export const Vocabular = ({cards, setCard, sortStates, filterStates}: Props) => 
     const filter = (cards: Card[]) => {
         if (filterStates.filterTable === true && filterStates.front !== '') {
             let newFilter = cards.filter(r => r.front.includes(filterStates.front))
-            newFilter.length !== 0 ? newFilter : newFilter = [{front: "noData", back: ''}]
-            return newFilter
+            return newFilter.length !== 0 ? newFilter : newFilter = [{front: "noData", back: ''}]
         }
         else if (filterStates.filterTable === true && filterStates.back !== '') {
             let newFilter = cards.filter(r => r.back.includes(filterStates.back))
-            newFilter.length !== 0 ? newFilter : newFilter = [{front: "noData", back: ''}]
-            return newFilter
+            return newFilter.length !== 0 ? newFilter : newFilter = [{front: "noData", back: ''}]
         }
         else {
             return cards
