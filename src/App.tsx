@@ -16,7 +16,6 @@ import {useState} from 'react'
 function App() {
   const [cards, setCard] = useState<Card[]>([])
   const [sortStates, setSort] = useState<SortState>({front: true, asc:true})
-  /*const [filterTable, setFilter] = useState<boolean>(true)*/
   const [filterStates, setFilterStates] = useState<FilterState>({front: '', back: '', filterTable: true})
   return (
   <>
